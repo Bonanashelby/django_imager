@@ -38,17 +38,17 @@ class ImagerProfile(models.Model):
     location = models.CharField(max_length=100)
     photography_style = models.CharField(
         max_length=5,
-        choices=PHOTO_CHOICES
+        choices=PHOTO_CHOICES,
         default='BW'
     )
     camera_type = models.CharField(
         choices=CAMERA_CHOICES,
-        max_length=3
+        max_length=3,
         default='CAN'
     )
     website = models.CharField(max_length=100)
     joined_date = models.DateField(auto_now=True)
-    objects = models.Mangaer()
+    objects = models.Manager()
     active = ImageActiveProfile()
 
     @property
